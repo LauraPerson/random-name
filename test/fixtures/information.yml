@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  letter_of_the_year: false
+  number_of_letters: 1
+  wanted_letters: MyString
+  unwanted_letters: MyString
+  start_with: MyString
+
+two:
+  letter_of_the_year: false
+  number_of_letters: 1
+  wanted_letters: MyString
+  unwanted_letters: MyString
+  start_with: MyString
