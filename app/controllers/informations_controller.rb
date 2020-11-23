@@ -9,9 +9,6 @@ def new
       else
         redirect_to error_path
       end
-    else
-      render(:new)
-    end
   end
 
   def error
