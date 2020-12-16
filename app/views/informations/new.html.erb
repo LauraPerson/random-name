@@ -1,3 +1,5 @@
+
+
 <div class="page-container content">
   <div class="form-image">
     <img src="/assets/form-img.png" alt="" class="form-img">
@@ -7,10 +9,8 @@
       <h1 class="text-center">Quelles sont tes préférences?</h1>
       <br>
       <%= simple_form_for @information, url: informations_path do |f| %>
-        <%= f.input :letter_of_the_year, collection: Information::REPONSE, as: :radio_buttons, label: "La lettre de l'année est R, voudrais tu que le prénom de ton chien commence par cette lettre?" %>
-        <%= f.input :unwanted_letters, collection: Information::LETTERS, input_html: {multiple: true}, label: "Quelles lettres veux-tu?" %>
-        <%= f.input :wanted_letters, collection: Information::LETTERS, label: "Quelles lettres ne veux-tu pas?" %>
-        <%= f.input :wanted_letters, collection: Information::LETTERS, label: "Tu veux que ça commence par quelle lettre?" %>
+        <%= f.input :letter_of_the_year, collection: Information::REPONSE, as: :radio_buttons, label: "Nous sommes en #{@year}, voudrais tu que le prénom de ton chien commence par la lettre #{Information::LETTERS_OF_YEARS[@year]}?" %>
+        <%= f.input :unwanted_letters, as: :check_boxes, collection: Information::LETTERS, label: "Quelles lettres ne veux-tu pas?" %>
         <%= f.input :number_of_letters, as: :integer, label: "Combien de lettres veux-tu dans le nom?"%>
         <div class="text-center mb-3">
           <%= f.submit "Woof Woof!", class: "btn-submit" %>
